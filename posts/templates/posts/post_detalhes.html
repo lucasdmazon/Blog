@@ -3,6 +3,11 @@
 {% block titulo %}{{ post.nome_post|title }} | {% endblock %}
 
 {% block conteudo %}
+
+{% if not user.is_authenticated %}
+<p>Necessario login para ser possivel ler o conteudo completo</p>
+{% else %}
+
 <!-- POST -->
     <div class="row pt-5">
         <div class="col-xl"></div>
@@ -78,4 +83,5 @@
         <div class="col-xl"></div>
     </div>
 <!-- POST -->
+{% endif %}
 {% endblock %}
