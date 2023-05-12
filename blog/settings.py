@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'posts',
     'categorias',
     'comentarios',
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

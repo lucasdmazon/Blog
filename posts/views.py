@@ -7,6 +7,7 @@ from comentarios.forms import FormComentario
 from comentarios.models import Comentario
 from django.contrib import messages
 from django.views import View
+from django.contrib.auth.decorators import login_required
 
 
 class PostIndex(ListView):

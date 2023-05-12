@@ -1,3 +1,4 @@
+{% if 'accounts' not in request.path %}
 {% load static %}
 
 <!--_footer.html-->
@@ -17,3 +18,4 @@
 
 <script src="{% static 'vendor/jquery/jquery.slim.min.js' %}"></script>
 <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+{% endif %}
