@@ -3,7 +3,11 @@
 {% block titulo %}Login |{% endblock %}
 
 {% block conteudo %}
-<h1 class="mt-3 mb-3">Login</h1>
+
+<br><br><br>
+<main class="text-white col-md-6  container" style="border-radius: 25px; background-color: #131029">
+<br>
+<h1 class="mt-3 mb-3 d-flex justify-content-center" align="center">Login</h1>
 
 {% if not user.is_authenticated %}
 <form method="POST" action="{% url 'login' %}">
@@ -17,13 +21,18 @@
     <label>Senha</label>
     <input type="password" name="senha" class="form-control">
   </div>
+      <div class="col text-center">
   <button type="submit" class="btn btn-primary">Logar</button>
+      </div>
+<h6 class="col text-center">Logar como <a href="{{ '/admin' }}" class="text-info">Administrador</a></h6>
+    <h6 class="col text-center">Não tem conta? <a href="{{ '/accounts/cadastro' }}" class="text-info">Cadastre-se</a></h6>
 </form>
 {% else %}
-<p>
-  você fez login como {{ user }},
+<p class="text-center">
+ Você fez login como {{ user }}.
   <a href="{% url 'logout' %}">Clique aqui</a> para sair.
 </p>
 {% endif %}
-
+<br>
+</main>
 {% endblock %}

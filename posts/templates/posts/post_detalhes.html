@@ -5,7 +5,7 @@
 {% block conteudo %}
 
 {% if not user.is_authenticated %}
-<p>Necessario login para ser possivel ler o conteudo completo</p>
+<h2 class="my-3 text-light text-center rounded" style="background-color: #4f40a4">Necessário estar logado para ser possível ler o conteúdo completo</h2>
 {% else %}
 
 <!-- POST -->
@@ -37,29 +37,12 @@
         <div class="col-xl"></div>
     </div>
 
-    {% if comentarios %}
-    <div class="row pt-5">
+ <div class="row pt-5">
         <div class="col-xl"></div>
         <div class="col-xl-8">
-            <h2 class="my-3">Comentários ({{ comentarios.count }})</h2>
+            <h2 class="my-3 text-light text-center rounded" style="background-color: #4f40a4">Deixe um comentário</h2>
 
-            {% for comentario in comentarios %}
-            <h5 class="mb-2 mt-5">{{ comentario.nome_comentario }} disse:</h5>
-            <small class="text-muted">{{ comentario.data_comentario }}</small>
-            <p class="mb-1">{{ comentario.comentario }}</p>
-            {% endfor %}
-
-        </div>
-        <div class="col-xl"></div>
-    </div>
-    {% endif %}
-
-    <div class="row pt-5">
-        <div class="col-xl"></div>
-        <div class="col-xl-8">
-            <h2 class="my-3">Deixe um comentário</h2>
-
-            <form method="POST" action="#envia_comentario">
+            <form method="POST" class="col-md-6 offset-md-3" action="#envia_comentario">
                 {% csrf_token %}
 
                 {% for hidden_field in form.hidden_fields %}
@@ -78,10 +61,27 @@
                 <input id="envia_comentario" type="submit" class="btn btn-primary" value="Enviar">
             </form>
 
+        </div>
+
+        <div class="col-xl"></div>
+    </div>
+
+    {% if comentarios %}
+    <div class="row pt-5">
+        <div class="col-xl"></div>
+        <div class="col-xl-8">
+            <h2 class="my-3 text-light text-center rounded" style="background-color: #4f40a4">Comentários ({{ comentarios.count }})</h2>
+
+            {% for comentario in comentarios %}
+            <h5 class="mb-2 mt-5">{{ comentario.nome_comentario }} disse:</h5>
+            <small class="text-muted">{{ comentario.data_comentario }}</small>
+            <p class="mb-1">{{ comentario.comentario }}</p>
+            {% endfor %}
 
         </div>
         <div class="col-xl"></div>
     </div>
+    {% endif %}
 <!-- POST -->
 {% endif %}
 {% endblock %}
