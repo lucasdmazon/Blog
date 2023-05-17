@@ -13,6 +13,7 @@ class Post(models.Model):
     imagem_post = models.ImageField(upload_to='post_img/%Y/%m/%d', blank=True, null=True, verbose_name='Imagem')
     publicado_post = models.BooleanField(default=False, verbose_name='Publicado')
 
+
     def __str__(self):
         return self.nome_post
 

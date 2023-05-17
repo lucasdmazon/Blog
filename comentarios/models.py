@@ -12,7 +12,7 @@ class Comentario(models.Model):
     usuario_comentario = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
     data_comentario = models.DateTimeField(default=timezone.now)
     publicado_comentario = models.BooleanField(default=True)
-
+    like_comentario = models.BooleanField(default=False, verbose_name='Like')
 
     def __str__(self):
         return self.nome_comentario

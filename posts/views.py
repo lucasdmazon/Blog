@@ -101,3 +101,6 @@ class PostDetalhes(View):
         messages.success(request, 'Seu Comemtário foi postado.')
         return redirect('post_detalhes', pk=self.kwargs.get('pk'))
 
+
+def grafico(request):
+    return render(request, 'grafico.html')

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages, auth
 from django.core.validators import validate_email
 from django.contrib.auth.models import User
@@ -69,9 +69,13 @@ def cadastro(request):
 
     user = User.objects.create_user(username=usuario, email=email, password=senha, first_name=nome, last_name=sobrenome)
     user.save()
+
     return redirect('login')
 
 
 @login_required(redirect_field_name='login')
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
+
+
+
