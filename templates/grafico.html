@@ -1,8 +1,87 @@
 {% extends 'base.html' %}
 {%block conteudo%}
+{% load static %}
+<br>
+<h1 class="mt-5 d-flex justify-content-center">Grafico de Popularidade de Likes por Vagas</h1>
+<img src="{% static 'favicon/vagas.png' %}" class="img-fluid mx-auto d-block" alt="Vagas">
+<h2 class="mt-5 d-flex justify-content-center">Lista com os IDs das empresas</h2>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Vagas</th>
+      <th scope="col">ID</th>
+      <th scope="col">Likes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">RHEAL CONSULTORES</th>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th scope="row">ONE ENERGY BRASIL</th>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th scope="row">BIOTRONIK</th>
+      <td>3</td>
+      <td>12</td>
+    </tr>
+  <tr>
+      <th scope="row">Fator WoW!</th>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+  <tr>
+      <th scope="row">MACCAFERRI</th>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+  <tr>
+      <th scope="row">IEL</th>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+   <tr>
+      <th scope="row">Caderno Nacional</th>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+   <tr>
+      <th scope="row">Associação Cultural Renov. Tecnológica Sorocabana</th>
+      <td>8</td>
+      <td>5</td>
+    </tr>
+   <tr>
+      <th scope="row">Amplifica Digital</th>
+      <td>9</td>
+      <td>11</td>
+    </tr>
+   <tr>
+      <th scope="row">RIOVAGAS</th>
+      <td>10</td>
+      <td>3</td>
+    </tr>
+   <tr>
+      <th scope="row">GPA</th>
+      <td>11</td>
+      <td>6</td>
+    </tr>
+   <tr>
+      <th scope="row">CONTINENTAL</th>
+      <td>12</td>
+      <td>2</td>
+    </tr>
+   <tr>
+      <th scope="row">Banco Itau</th>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1 class="mt-5 d-flex justify-content-center">Grafico de Popularidade por Likes</h1>
-<div style="min-height: 100%; min-height: 60vh; display: flex; align-items: center;">
-
-</div>
+<h1 class="mt-5 d-flex justify-content-center">Grafico de Popularidade de Likes por Categorias</h1>
+<img src="{% static 'favicon/categorias.png' %}" class="img-fluid mx-auto d-block" alt="categorias">
 {%endblock%}

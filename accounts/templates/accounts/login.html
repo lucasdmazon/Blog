@@ -31,7 +31,8 @@
 {% else %}
 <p class="text-center">
  Você fez login como {{ user }}.
-  <a href="{% url 'logout' %}">Clique aqui</a> para sair.
+  <a href="{% url 'logout' %}">Clique aqui</a> para sair.<br><br>
+    <a href="{% url 'index' %}">Clique aqui</a> para ir para a tela inícial.
 </p>
 {% endif %}
 <br>
